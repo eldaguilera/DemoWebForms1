@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DemoWebForms1.app.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <!--Se Define del titulo de la pagina-->
+    <title>Aplicación Web</title>
+    <!--Se Referencian los archivos de Estilo CSS custom y su fuente para que lo aplique a todas las paginas que deriven de esta pagina maestra-->
+    <link href="Styles/default.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/font.css" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<span class="icon icon-group"></span>
+			<h1><a href="#">ElDaguilera</a></h1>
+			<span>Design by <a href="http://templated.co" rel="nofollow">ElD@guilera</a></span>
+		</div>
+		<div id="triangle-up"></div>
+	</div>
+</div>
+<div id="menu-wrapper">
+		<div id="menu">
+			<ul>
+			    <li><a href="Default.aspx">Inicio</a> </li>
+                <li><a href="Usuarios.aspx">Usuarios</a> </li>
+                 <li><a href="AcercaDe.aspx">Acerca De</a> </li>
+			</ul>
+		</div>
+</div>
+<div id="wrapper">
+    <div id="featured-wrapper">
+		<div class="extra2 container">
+
+
+    <!--Se define Menu principal-->
+   
+        <!--Dentro del ContentPlaceHolder se metera el contenido general de las otras páginas-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+   
+    </form>
+</body>
+</html>

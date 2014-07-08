@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="DemoWebForms1" Label="DemoWebForms1" Category="Proyecto" />
+    <Node Id="Microsoft.SqlServer.Compact 4.0.8876.1" Label="Microsoft.SqlServer.Compact 4.0.8876.1" Category="Paquete" />
+    <Node Id="SqlServerCompact 4.0.8854.1" Label="SqlServerCompact 4.0.8854.1" Category="Paquete" />
+  </Nodes>
+  <Links>
+    <Link Source="SqlServerCompact 4.0.8854.1" Target="Microsoft.SqlServer.Compact 4.0.8876.1" Category="Dependencia de paquete" />
+    <Link Source="DemoWebForms1" Target="SqlServerCompact 4.0.8854.1" Category="Paquete instalado" />
+  </Links>
+  <Categories>
+    <Category Id="Proyecto" />
+    <Category Id="Paquete" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Proyecto" ValueLabel="True">
+      <Condition Expression="HasCategory('Proyecto')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Dependencia de paquete" ValueLabel="True">
+      <Condition Expression="HasCategory('Dependencia de paquete')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
